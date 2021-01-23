@@ -1,0 +1,120 @@
+<html>
+    <head>
+        <title> Build parah using join function</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="myscripts.js"></script>
+    </head>
+
+    <body>
+        <center><h1>! Making Paragraph using Join function !</h1></center>
+
+    <center>
+<div></div>
+    
+    <div class="column" id="showpara11">
+        <span>1.</span>
+        <input type="text" id="para1_input_box_1" placeholder="Name"><br>
+
+        <span>2.</span>
+        <input type="text" id="para1_input_box_2" placeholder="Address-1"><br>
+
+        <span>3.</span>
+        <input type="text" id="para1_input_box_3" placeholder="Address-2"><br>
+
+        <span>4.</span>
+        <input type="text" id="para1_input_box_4" placeholder="City"><br>
+
+        <span>5.</span>
+        <input type="text" id="para1_input_box_5" placeholder="Pin-Code"><br>
+
+        <span>6.</span>
+        <input type="text" id="para1_input_box_6" placeholder="Telephone number"><br>
+
+        <button onclick=getParagraph1()>Capture personal info</button>
+    </div>
+
+    <div class="column" id="showpara21">
+        <div>
+        <span>1.</span>
+        <input type="text" id="para2_input_box_1" placeholder="School/Collage"><br>
+
+        <span>2.</span>
+        <input type="text" id="para2_input_box_2" placeholder="Class"><br>
+
+        <span>3.</span>
+        <input type="text" id="para2_input_box_3" placeholder="Div"><br>
+
+        <span>4.</span>
+        <input type="text" id="para2_input_box_4" placeholder="Roll-no-"><br>
+
+        <span>5.</span>
+        <input type="text" id="para2_input_box_5" placeholder="Board"><br>
+
+        <span>6.</span>
+        <input type="text" id="para2_input_box_6" placeholder="House"><br>
+
+        <button onclick="getParagraph2()">Capture school info</button>
+    </div>
+</div>
+
+<center>
+<div class="column" id="showpara31">
+    <br><br><br><textarea name="message" rows="7" cols="30" id="para3"></textarea><br>
+    <button onclick="getParagraph3()">Capture Details</button><br>
+</div>
+</div>
+</center>
+
+</center>  
+
+<p>
+<div id ="R">
+    <h3 id="A"> Personal Information :</h3><div id="showpara1"></div>
+    <h3 id="A"> School/College Information : </h3><div id="showpara2"></div>
+    <h3 id="A"> Other Important Details : </h3><div id="showpara3"></div>
+</div>
+</p>
+
+
+
+
+
+<script>
+function getParagraph1(){
+      var input=[];
+    for(var i=1;i<=6; i++)
+{
+input.push(document.getElementById("para1_input_box_"+i).value);
+}
+input.join(".")
+document.getElementById("showpara1").innerHTML=input.join(".")
+}
+   
+
+function getParagraph2(){
+    var input=[];
+    for(var i=1;i<=6; i++)
+{
+input.push(document.getElementById("para2_input_box_"+i).value);
+
+}
+input.join(".")
+document.getElementById("showpara2").innerHTML=input.join(".")
+}
+
+  
+
+
+function getParagraph3(){
+var A=document.getElementById("para3").value;
+console.log(A)
+document.getElementById("showpara3").innerHTML=A;
+
+}
+    
+
+
+
+    </script>
+    </body>
+</html>
